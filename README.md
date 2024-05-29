@@ -1,30 +1,17 @@
-# React + TypeScript + Vite
+# Deployment
+https://aquariux-exam.vercel.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Stack
+- Mantine UI
+- React Query
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# Features
+- [x] Display current date, weather icon, temperature, description humidity, wind speed with arrow degree direction and visibility
+- [x] Display the available forecast data with forecast date with 24 hour format, weather icon, max & min temperature and description in every
+- [x] Filter and segregate the forecast data into different days - today and the following days provided by Open Weather API.
+- [x] Display a search input and search history list.
+- [x] Navigate to the Home page and update the weather details if the search is valid.
+- [x] Display error message if the search is invalid.
+- [x] Store the search history in the browser. 
+- [x] Navigate to the Home page and update the weather details when a search history is selected.
+- [x] Allow search history deletion.

@@ -1,11 +1,4 @@
-import {
-  Flex,
-  Input,
-  Loader,
-  Skeleton,
-  Stack,
-  Text,
-} from "@mantine/core";
+import { Flex, Input, Loader, Skeleton, Stack, Text } from "@mantine/core";
 import "./App.css";
 import { useEffect, useMemo, useState } from "react";
 import { useGetCurrentInfo } from "./hooks/use-get-current-info";
