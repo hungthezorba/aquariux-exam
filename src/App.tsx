@@ -1,4 +1,11 @@
-import { Input, Stack, Text } from "@mantine/core";
+import {
+  Flex,
+  Input,
+  Loader,
+  Skeleton,
+  Stack,
+  Text,
+} from "@mantine/core";
 import "./App.css";
 import { useEffect, useMemo, useState } from "react";
 import { useGetCurrentInfo } from "./hooks/use-get-current-info";
@@ -191,7 +198,11 @@ function App() {
 
   return (
     <Stack gap={4}>
-      <Text>{`${selectedLocation.city}, ${selectedLocation.country}`}</Text>
+      {selectedLocation.city ? (
+        <Text>{`${selectedLocation.city}, ${selectedLocation.country}`}</Text>
+      ) : (
+        <Skeleton h={24}></Skeleton>
+      )}
       <Stack gap={16}>
         <Stack gap={8}>
           <Input
@@ -217,8 +228,12 @@ function App() {
           </>
         ) : (
           <>
-            {currentWeather && forecast && (
+            {currentWeather && forecast ? (
               <Home currentWeather={currentWeather} forecast={forecast} />
+            ) : (
+              <Flex justify="center" align="center">
+                <Loader />
+              </Flex>
             )}
           </>
         )}
