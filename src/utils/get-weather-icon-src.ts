@@ -1,0 +1,1 @@
+export const getWeatherIconSrc = (icon: string) => `http://openweathermap.org/img/wn/${icon}@2x.png`

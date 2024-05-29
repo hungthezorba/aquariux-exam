@@ -1,0 +1,1 @@
+export const convertFahrenheitToCelsius = (fahrenheit: number) => (fahrenheit - 32) * 5/9
