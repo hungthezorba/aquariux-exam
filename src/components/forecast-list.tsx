@@ -15,8 +15,8 @@ export const ForecastList = ({ label, sections }: IForecastListProps) => {
       <Text fw={700}>{label}</Text>
       <Card shadow="sm" padding="xs" radius="md" withBorder>
         <Stack>
-          {sections.map((section) => (
-            <ForecastListSection section={section} />
+          {sections.map((section, index) => (
+            <ForecastListSection key={index} section={section} />
           ))}
         </Stack>
       </Card>

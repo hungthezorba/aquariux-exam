@@ -29,10 +29,8 @@ export const SearchHistory = ({
         {history.length ? (
           <Stack gap={16}>
             {history.map((item) => (
-              <Group justify="space-between" px={8}>
-                <Text>
-                  {`${item.city}, ${item.country}`}
-                </Text>
+              <Group key={item.id} justify="space-between" px={8}>
+                <Text>{`${item.city}, ${item.country}`}</Text>
                 <Group>
                   <ActionIcon
                     variant="outline"
@@ -54,9 +52,7 @@ export const SearchHistory = ({
           </Stack>
         ) : (
           <Stack align="center" justify="center" p={16}>
-            <Text opacity={0.8}>
-              No content available
-            </Text>
+            <Text opacity={0.8}>No content available</Text>
           </Stack>
         )}
       </Card>

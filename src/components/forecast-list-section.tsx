@@ -15,8 +15,8 @@ export const ForecastListSection = ({ section }: IForecastListSectionProps) => {
     <Stack>
       <Text fw={600} opacity={0.4}>{section.label}</Text>
       <Stack>
-        {section.data.map(item => (
-          <ForecastListSectionItem {...item} />
+        {section.data.map((item, index) => (
+          <ForecastListSectionItem key={index} {...item} />
         ))}
       </Stack>
     </Stack>

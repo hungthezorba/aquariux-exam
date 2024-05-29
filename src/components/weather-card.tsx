@@ -1,6 +1,6 @@
 import { IMain, IWind } from "@/interfaces/weather";
 import { Card, Group, Image, Text, Stack, rem } from "@mantine/core";
-import { IconArrowNarrowUp } from '@tabler/icons-react';
+import { IconArrowNarrowUp } from "@tabler/icons-react";
 
 interface IWeatherCardProps {
   date: string;
@@ -19,7 +19,6 @@ export const WeatherCard = ({
   visibility,
   description,
 }: IWeatherCardProps) => {
-
   const data = [
     {
       label: "Humidity",
@@ -27,12 +26,12 @@ export const WeatherCard = ({
     },
     {
       label: "Winds",
-      value: <Group gap={1}>
-        <IconArrowNarrowUp style={{rotate: `${wind.deg}deg`}} size={20}/>
-        <Text fw={600}>
-          {wind.speed} m/s
-        </Text>
-      </Group>,
+      value: (
+        <Group gap={1}>
+          <IconArrowNarrowUp style={{ rotate: `${wind.deg}deg` }} size={20} />
+          <Text fw={600}>{wind.speed} m/s</Text>
+        </Group>
+      ),
     },
     {
       label: "Visibility",
@@ -53,8 +52,10 @@ export const WeatherCard = ({
       </Group>
       <Group align="center" justify="center">
         {data.map((item) => (
-          <Stack align="center" gap={3}>
-            <Text size='sm' fw={500} opacity={0.4}>{item.label}</Text>
+          <Stack key={item.label} align="center" gap={3}>
+            <Text size="sm" fw={500} opacity={0.4}>
+              {item.label}
+            </Text>
             <Text fw={600}>{item.value}</Text>
           </Stack>
         ))}
